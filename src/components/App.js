@@ -35,15 +35,17 @@ setTodos([...todos].reverse());
 
 return (
 <div id="main">
-<button onClick={reverseOrder}>Reverse</button>
-<table>
-<tbody>
-{todos.map((todo) => (
-<ToDo key={todo.id} todoId={todo.id} createdAt={todo.createdAt} />
-))}
-</tbody>
-</table>
-</div>
+      <button onClick = {reverseOrder}>Reverse</button>
+      <table>
+        <tbody>
+          {
+            todos.map((todo) => (
+              <ToDo key ={todo.id} todoid = {todo} createdAt = {todo.createdAt}/>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
 );
 }
 
